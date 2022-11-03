@@ -1,0 +1,17 @@
+Thank you for your time today. Here’s the hands-on challenge. Please send us the result of it in a Github repo, with instructions for installation and execution. 
+
+Challenge – Logistics company
+
+Jack owns a logistics company, and he needs help building his platform to manage storage, inventory and transportation(shipments) of his packages. Your app should be able to complete the following tasks:
+
+·  Register a new package into the system, assign a storage location from the warehouse to each package (unique locations, but if a package leaves the warehouse that location can once again be assigned to a package)
+
+·  Listing of all packages in the system and their status (inventory of packages)
+
+·  Ship a package. You have one truck to deliver packages, so you need to figure out the best route to deliver your packages. 
+
+·  Map screen showing the shipping route with all the stops for delivery
+
+·  Build the Back End using NodeJS
+
+·  Build the Front End using ReactJS
