@@ -1,13 +1,13 @@
 import { MapProvider } from "./context/map/MapProvider";
-import { PackagesProvider } from "./context/packages/PackagesProvider";
+import { PlacesProvider } from "./context/places/PlacesProvider";
 import { HomeScreen } from "./screens/HomeScreen";
 
 export const LogisticsApp = () => {
   return (
-    <PackagesProvider>
+    <PlacesProvider>
       <MapProvider>
         <HomeScreen />
       </MapProvider>
-    </PackagesProvider>
+    </PlacesProvider>
   );
 };

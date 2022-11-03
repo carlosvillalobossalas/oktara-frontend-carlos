@@ -1,7 +1,7 @@
 import { Map, Marker, Popup } from "mapbox-gl";
-import { useReducer } from "react";
 import { MapContext } from "./MapContext";
 import { mapReducer } from "./mapReducer";
+import { useReducer } from "react";
 
 export interface MapState {
   isMapReady: boolean;

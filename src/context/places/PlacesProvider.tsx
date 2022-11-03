@@ -1,11 +1,11 @@
-import { useEffect, useReducer } from "react";
-import { searchApi } from "../../apis";
-import { getUserLocation } from "../../helpers/getUserLocation";
 import { Feature, PlacesResponse } from "../../interfaces/places";
-import { PackagesContext } from "./PackagesContext";
-import { packagesReducer } from "./packagesReducer";
+import { getUserLocation } from "../../helpers/getUserLocation";
+import { PlacesContext } from "./PlacesContext";
+import { placesReducer } from "./placesReducer";
+import { searchApi } from "../../apis";
+import { useEffect, useReducer } from "react";
 
-export interface PackagesState {
+export interface PlacesState {
   isLoading: boolean;
   userLocation?: [number, number];
   isLoadingPlaces: boolean;
@@ -13,7 +13,7 @@ export interface PackagesState {
   packages: Feature[];
 }
 
-const INITIAL_STATE: PackagesState = {
+const INITIAL_STATE: PlacesState = {
   isLoading: true,
   userLocation: undefined,
   isLoadingPlaces: false,
@@ -25,8 +25,8 @@ interface Props {
   children: JSX.Element | JSX.Element[];
 }
 
-export const PackagesProvider = ({ children }: Props) => {
-  const [state, dispatch] = useReducer(packagesReducer, INITIAL_STATE);
+export const PlacesProvider = ({ children }: Props) => {
+  const [state, dispatch] = useReducer(placesReducer, INITIAL_STATE);
 
   const searchPlacesByTerm = async (query: string): Promise<Feature[]> => {
     if (query.length === 0) {
@@ -48,6 +48,10 @@ export const PackagesProvider = ({ children }: Props) => {
     return response.data.features;
   };
 
+  const setPlaces = (places: Feature[]) => {
+    dispatch({ type: "setPlaces", payload: places });
+  };
+
   useEffect(() => {
     getUserLocation().then((lngLat) =>
       dispatch({ type: "setUserLocation", payload: lngLat })
@@ -55,13 +59,14 @@ export const PackagesProvider = ({ children }: Props) => {
   }, []);
 
   return (
-    <PackagesContext.Provider
+    <PlacesContext.Provider
       value={{
         ...state,
         searchPlacesByTerm,
+        setPlaces,
       }}
     >
       {children}
-    </PackagesContext.Provider>
+    </PlacesContext.Provider>
   );
 };
