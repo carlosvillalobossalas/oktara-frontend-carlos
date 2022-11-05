@@ -1,4 +1,5 @@
-import { Map } from "mapbox-gl";
+//@ts-ignore
+import { Map } from "!mapbox-gl";
 import { MapContext } from "../context/map/MapContext";
 import { PlacesContext } from "../context/places/PlacesContext";
 import { useContext, useLayoutEffect, useRef } from "react";

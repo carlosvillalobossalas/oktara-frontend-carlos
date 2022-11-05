@@ -1,4 +1,5 @@
-import { AnySourceData, LngLatBounds, Map, Marker, Popup } from "mapbox-gl";
+//@ts-ignore
+import { AnySourceData, LngLatBounds, Map, Marker, Popup } from "!mapbox-gl";
 import { directionsApi } from "../../apis";
 import { DirectionsResponse } from "../../interfaces/directions";
 import { MapContext } from "./MapContext";

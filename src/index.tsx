@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import mapboxgl from "mapbox-gl";
+//@ts-ignore
+import mapboxgl from "!mapbox-gl";
 import { LogisticsApp } from "./LogisticsApp";
 import "./index.css";
 

@@ -1,4 +1,5 @@
-import { Map, Marker } from "mapbox-gl";
+//@ts-ignore
+import { Map, Marker } from "!mapbox-gl";
 
 export interface MapContextProps {
   isMapReady: boolean;
