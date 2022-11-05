@@ -15,7 +15,7 @@ export const MapView = () => {
         container: mapDiv.current!, // container ID
         style: "mapbox://styles/mapbox/light-v10", // style URL
         center: userLocation, // starting position [lng, lat]
-        zoom: 14, // starting zoom,
+        zoom: 8, // starting zoom,
       });
 
       setMap(map);

@@ -2,13 +2,33 @@ body {
   margin: 0;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 .app-container{
   display: flex;
   flex-direction: column;
 }
 
 .navbar{
-  height: 8vh;
+  height: 15vh;
   display: flex;
   background-color: rgb(233, 227, 227);
   border-bottom: 1px solid grey;
@@ -22,24 +42,39 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-
+.navbar-packages-container{
+  width: 55%;
+  height: 90%;
+  text-align: center;
+}
 .navbar-packages{
-  width: 65%;
-  height: 100%;
-  background-color: white;
-  border-radius: 5px;
-  padding: 5px;
-  border: 1px solid rgb(193, 191, 191);
+  height: 65%;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow-x: auto;
 }
 
 .map-container{
   display: flex;
-  height: 91vh;
+  height: 85vh;
 }
 
-.package-list{
+.package-list-container{
   width: 25%;
   background-color: rgb(233, 227, 227);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.package-list{
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .search-container{
@@ -47,4 +82,27 @@ body {
   border-radius: 5px;
   padding: 1px;
   width: 300px;
+}
+
+.package-info-card:hover{
+  background-color: rgb(238, 238, 238);
+  /* border: 1px solid grey; */
+}
+
+.shipment-button{
+  min-width: 150px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.shipped{
+  color: green;
+}
+
+.pending{
+  color: red;
+}
+
+.shipping{
+  color: rgb(70, 92, 218);
 }
