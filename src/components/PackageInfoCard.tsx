@@ -40,7 +40,6 @@ export const PackageInfoCard = ({ packageInfo }: PackageInfoCardProps) => {
             <strong>Location:</strong> {packageInfo.location.place_name}
           </Typography>
           <Typography
-            // color="text.secondary"
             className={`${
               packageInfo.status === "Shipped"
                 ? "shipped"

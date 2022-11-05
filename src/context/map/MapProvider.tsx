@@ -1,11 +1,11 @@
 import { AnySourceData, LngLatBounds, Map, Marker, Popup } from "mapbox-gl";
-import { MapContext } from "./MapContext";
-import { mapReducer } from "./mapReducer";
-import { useContext, useEffect, useReducer } from "react";
-import { MapState } from "../../interfaces/map";
-import { PackageContext } from "../packages/PackageContext";
 import { directionsApi } from "../../apis";
 import { DirectionsResponse } from "../../interfaces/directions";
+import { MapContext } from "./MapContext";
+import { mapReducer } from "./mapReducer";
+import { MapState } from "../../interfaces/map";
+import { PackageContext } from "../packages/PackageContext";
+import { useContext, useEffect, useReducer } from "react";
 
 const INITIAL_STATE: MapState = {
   isMapReady: false,
@@ -23,8 +23,7 @@ export const MapProvider = ({ children }: Props) => {
 
   const setMap = (map: Map) => {
     const myLocationPopup = new Popup().setHTML(`
-      <h4>Aqui estoy</h4>
-      <p>En algun lugar del mundo</p>
+      <h4>I am here</h4>
     `);
     new Marker({
       color: "#61DAFB",

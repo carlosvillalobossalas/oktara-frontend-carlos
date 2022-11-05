@@ -1,17 +1,9 @@
-import { Feature, PlacesResponse } from "../../interfaces/places";
+import { Feature, PlacesResponse, PlacesState } from "../../interfaces/places";
 import { getUserLocation } from "../../helpers/getUserLocation";
 import { PlacesContext } from "./PlacesContext";
 import { placesReducer } from "./placesReducer";
 import { searchApi } from "../../apis";
 import { useEffect, useReducer } from "react";
-
-export interface PlacesState {
-  isLoading: boolean;
-  userLocation?: [number, number];
-  isLoadingPlaces: boolean;
-  places: Feature[];
-  packages: Feature[];
-}
 
 const INITIAL_STATE: PlacesState = {
   isLoading: true,

@@ -1,5 +1,4 @@
-import { Feature } from "../../interfaces/places";
-import { PlacesState } from "./PlacesProvider";
+import { Feature, PlacesState } from "../../interfaces/places";
 
 type PlacesAction =
   | { type: "setUserLocation"; payload: [number, number] }

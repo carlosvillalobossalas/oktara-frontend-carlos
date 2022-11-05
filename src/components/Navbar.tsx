@@ -1,20 +1,17 @@
-import { Button, DialogContentText } from "@mui/material";
-import { useContext, useState } from "react";
-import { PlacesContext } from "../context/places/PlacesContext";
 import { AddNewPackageModal } from "./AddNewPackageModal";
-import { ShipmentsList } from "./ShipmentsList";
-import { PackageContext } from "../context/packages/PackageContext";
+import { Button, DialogContentText } from "@mui/material";
 import { MapContext } from "../context/map/MapContext";
+import { PackageContext } from "../context/packages/PackageContext";
+import { PlacesContext } from "../context/places/PlacesContext";
+import { ShipmentsList } from "./ShipmentsList";
 import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import logisticsApi from "../apis/logisticsApi";
+import { useContext, useState } from "react";
+import { logisticsApi } from "../apis";
 import Dialog from "@mui/material/Dialog";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
-
-//TODO:
-// 1. Agregar confirm dialog para enviar paquetes
+import DialogContent from "@mui/material/DialogContent";
+import DialogTitle from "@mui/material/DialogTitle";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Navbar = () => {
   const [openAddPackageModal, setOpenAddPackageModal] = useState(false);
@@ -34,8 +31,8 @@ export const Navbar = () => {
   };
 
   const notifyProgress = () =>
-    toast.warning("Sending Packages...", { autoClose: 5000 });
-  const notifySuccess = () => toast.success("Packages sent successfully");
+    toast.warning("Shipping Packages...", { autoClose: 5000 });
+  const notifySuccess = () => toast.success("Packages shipped successfully");
 
   const updatePackagesStatus = async () => {
     const shipmentsIds = shipments.map((p) => p.id);

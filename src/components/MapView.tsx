@@ -23,7 +23,7 @@ export const MapView = () => {
   }, [isLoading, userLocation]);
 
   if (isLoading) {
-    return <>Cargando...</>;
+    return <>Loading...</>;
   }
   return (
     <div
