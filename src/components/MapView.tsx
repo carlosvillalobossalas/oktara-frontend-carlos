@@ -1,3 +1,4 @@
+/* eslint import/no-webpack-loader-syntax: off */
 //@ts-ignore
 import { Map } from "!mapbox-gl";
 import { MapContext } from "../context/map/MapContext";
