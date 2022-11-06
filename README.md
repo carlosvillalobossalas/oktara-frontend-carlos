@@ -1,46 +1,35 @@
-# Getting Started with Create React App
+# Logistics App
+#### Open the project in a terminal
+#### Install node modules
+`npm i`
+#### Run project
+`npm start`
+## App hosted: https://oktara-carlos.herokuapp.com/
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Home Screen
+![image](https://user-images.githubusercontent.com/63723906/200156335-637bb88f-cc9d-4f64-8a10-30f42bb9aa2f.png)
 
-## Available Scripts
+### Add new Package
+![image](https://user-images.githubusercontent.com/63723906/200156349-63087614-27b5-4620-af71-59a8b7ad622e.png)
+![image](https://user-images.githubusercontent.com/63723906/200156354-d2a5363c-e877-4fd0-a194-1248f9eaa57c.png)
+![image](https://user-images.githubusercontent.com/63723906/200156367-6c63040c-31f4-4505-a969-60c9d98bdd45.png)
+![image](https://user-images.githubusercontent.com/63723906/200156373-2c599eb4-7e71-43c9-a7d1-6e76ca61441b.png)
 
-In the project directory, you can run:
+### Packages List
+![image](https://user-images.githubusercontent.com/63723906/200156392-073e465c-2869-4ae4-aa93-a28947d04038.png)
 
-### `npm start`
+### Shipments List
+![image](https://user-images.githubusercontent.com/63723906/200156408-6cc65ab5-c37c-4fe3-9962-a30293120e7d.png)
+![image](https://user-images.githubusercontent.com/63723906/200156421-ebdb2703-f1d9-4c84-b292-b27ebfeabf3b.png)
+![image](https://user-images.githubusercontent.com/63723906/200156426-32667a8a-6068-4ded-bacb-5f8319351e42.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Map with shipments on list
+![image](https://user-images.githubusercontent.com/63723906/200156445-b5309b81-a1a6-4569-800c-2c93792567c9.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Send packages
+![image](https://user-images.githubusercontent.com/63723906/200156454-318a8419-63da-4f26-8ee6-5aefcb971ae2.png)
+![image](https://user-images.githubusercontent.com/63723906/200156458-5cbe1903-1103-4501-a5ef-2418ca76dc8c.png)
+![image](https://user-images.githubusercontent.com/63723906/200156466-743d21b8-37d9-4585-a568-46147f44ea92.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
