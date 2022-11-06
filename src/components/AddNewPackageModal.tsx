@@ -135,7 +135,17 @@ export const AddNewPackageModal = ({ open, handleClose }: ModalProps) => {
         </DialogContent>
         <DialogActions>
           <Button onClick={handleClose}>Cancel</Button>
-          <Button onClick={() => setOpenConfirmDialog(true)}>
+          <Button
+            onClick={() => {
+              if (packageName !== "" && locationSelected) {
+                setOpenConfirmDialog(true);
+              } else {
+                alert(
+                  "Please write a package name and select a location first"
+                );
+              }
+            }}
+          >
             Add Package
           </Button>
         </DialogActions>
