@@ -20,7 +20,7 @@ interface ModalProps {
 export const AddNewPackageModal = ({ open, handleClose }: ModalProps) => {
   const { searchPlacesByTerm, setPlaces, isLoadingPlaces, places } =
     useContext(PlacesContext);
-  const { refreshPackages } = useContext(PackageContext);
+  const { refreshPackages, packages } = useContext(PackageContext);
   const [packageName, setPackageName] = useState("");
   const [locationSelected, setLocationSelected] = useState<Feature>();
   const [placeSelected, setPlaceSelected] = useState("");
@@ -119,7 +119,6 @@ export const AddNewPackageModal = ({ open, handleClose }: ModalProps) => {
                     <button
                       className={`btn btn-sm btn-outline-primary`}
                       onClick={() => {
-                        console.log(place);
                         setPlaceSelected(place.place_name);
                         setLocationSelected(place);
                         setPlaces([]);
@@ -138,7 +137,14 @@ export const AddNewPackageModal = ({ open, handleClose }: ModalProps) => {
           <Button
             onClick={() => {
               if (packageName !== "" && locationSelected) {
-                setOpenConfirmDialog(true);
+                let packagesLocations = packages?.map(
+                  (p) => p.location.place_name
+                );
+                if (packagesLocations?.includes(locationSelected.place_name)) {
+                  alert("One package has already this location");
+                } else {
+                  setOpenConfirmDialog(true);
+                }
               } else {
                 alert(
                   "Please write a package name and select a location first"

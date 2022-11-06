@@ -1,3 +1,5 @@
+import { Feature } from "./places";
+
 export interface PackageContextProps {
   refresh: boolean;
   packages?: Package[];
@@ -24,7 +26,8 @@ export interface Packages {
 export interface Package {
   id: string;
   name: string;
-  location: Location;
+  // location: Location;
+  location: Feature;
   status: string;
   __v: number;
 }
